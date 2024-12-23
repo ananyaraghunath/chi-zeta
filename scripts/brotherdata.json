@@ -1,4 +1,30 @@
 {
+  "Omicron Class":{
+    "Elif Kiziltan":{
+      "linkedin":"https://www.linkedin.com/in/elif-kiziltan-0b205324a/",
+      "headshot":"/assets/headshots/omicrons/elifkiziltan.jpg"
+    },
+    "Farah Islam":{
+      "linkedin":"https://www.linkedin.com/in/farah-tashfia-islam-2b07202b8/",
+      "headshot":"/assets/headshots/omicrons/farahislam.jpg"
+    },
+    "Joyce Estafanous":{
+      "linkedin":"https://www.linkedin.com/in/joyce-estafanous-a957b4288/",
+      "headshot":"/assets/headshots/omicrons/joyceestafanous.jpg"
+    },
+    "Ojas Purandare":{
+      "linkedin":"https://www.linkedin.com/in/ojaspurandare/",
+      "headshot":"/assets/headshots/omicrons/ojaspurandare.jpg"
+    },
+    "Rohan Shah":{
+      "linkedin":"https://www.linkedin.com/in/rshah713/",
+      "headshot":"/assets/headshots/omicrons/rohanshah.jpg"
+    },
+    "Wassem Georgey":{
+      "linkedin":"https://www.linkedin.com/in/wassem-georgey-1b980926a/",
+      "headshot":"/assets/headshots/omicrons/wassemgeorgey.jpg"
+    }
+  },
   "Xi Class":{
     "Ananya Tyagi":{
       "linkedin":"www.linkedin.com/in/ananyatyagi323/",
