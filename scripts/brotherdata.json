@@ -1,4 +1,50 @@
 {
+  "Pi Class": {
+    "Aditya Mahalingam": {
+      "linkedin": "www.linkedin.com/in/adityamahalingam/",
+      "headshot": "/assets/headshots/Blank.jpg"
+    },
+    "Ananya Raghunath": {
+      "linkedin": "www.linkedin.com/in/ananya-raghunath/",
+      "headshot": "/assets/headshots/pis/ananya.jpg"
+    },
+    "Ariana Chen": {
+      "linkedin": "www.linkedin.com/in/ariana-m-chen/",
+      "headshot": "/assets/headshots/pis/ariana.jpeg"
+    },
+    "Atharva Inamdhar": {
+      "linkedin": "www.linkedin.com/in/atharva-inamdar006/",
+      "headshot": "/assets/headshots/Blank.jpg"
+    },
+    "Dev Doshi": {
+      "linkedin": "www.linkedin.com/in/devdoshimd/",
+      "headshot": "/assets/headshots/Blank.jpg"
+    },
+    "Gurmeher Singh": {
+      "linkedin": "www.linkedin.com/in/gurmehersingh/",
+      "headshot": "/assets/headshots/pis/guru.JPG"
+    },
+    "Harish Sekar": {
+      "linkedin": "www.linkedin.com/in/harish-sekar-a4a674252/",
+      "headshot": "/assets/headshots/pis/harish.jpeg"
+    },
+    "Hritika Shah": {
+      "linkedin": "www.linkedin.com/in/shah-hritika/",
+      "headshot": "/assets/headshots/pis/hritika.jpg"
+    },
+    "Sadhista Linga": {
+      "linkedin": "www.linkedin.com/in/sadhista-linga-6b4213322/",
+      "headshot": "/assets/headshots/Blank.jpg"
+    },
+    "Sergio Giraldo": {
+      "linkedin": "www.linkedin.com/in/sergio-e-giraldo/",
+      "headshot": "/assets/headshots/omicrons/sergio.JPG"
+    },
+    "Sudarshan Ganapathy": {
+      "linkedin": "www.linkedin.com/in/sudarshan-ganapathy/",
+      "headshot": "/assets/headshots/Blank.jpg"
+    }
+  },
   "Omicron Class": {
     "Elif Kiziltan": {
       "linkedin": "www.linkedin.com/in/elif-kiziltan-0b205324a/",
