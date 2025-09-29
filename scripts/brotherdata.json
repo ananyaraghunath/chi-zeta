@@ -94,7 +94,7 @@
       "linkedin": "www.linkedin.com/in/dhanya-sureshbabu",
       "headshot": "/assets/headshots/nu/dhanya.JPG"
     },
-    "Haley Patel": {
+    "Haley Patel*": {
       "linkedin": "www.linkedin.com/in/haleypatel12",
       "headshot": "/assets/headshots/nu/haley.jpg"
     },
@@ -142,21 +142,21 @@
       "headshot": "/assets/headshots/mus/mithil.jpg"
     },
 
-    "Om Tripathi": {
+    "Om Tripathi*": {
       "linkedin": "www.linkedin.com/in/om-tripathi-8b97251b3/",
       "headshot": "/assets/headshots/mus/om.jpg"
     },
-    "Suhas Murthy": {
+    "Suhas Murthy*": {
       "linkedin": "www.linkedin.com/in/suhas-murthy1/",
       "headshot": "/assets/headshots/mus/suhas.jpg"
     },
-    "Vignesh Prakash": {
+    "Vignesh Prakash*": {
       "linkedin": "www.linkedin.com/in/vignesh-prakash/",
       "headshot": "/assets/headshots/mus/vignesh.jpg"
     }
   },
   "Lambda Class": {
-    "Alexis Orellana": {
+    "Alexis Orellana*": {
       "linkedin": "www.linkedin.com/in/alexisorellana/",
       "headshot": "/assets/headshots/lambdas/AlexisO.jpg"
     },
@@ -181,31 +181,31 @@
       "headshot": "/assets/headshots/lambdas/JuanP.jpg"
     },
 
-    "Justin Abraham": {
+    "Justin Abraham*": {
       "linkedin": "www.linkedin.com/in/justinabraham03/",
       "headshot": "/assets/headshots/lambdas/JustinA.jpg"
     },
 
-    "Megha Saju": {
+    "Megha Saju*": {
       "linkedin": "www.linkedin.com/in/megha-saju/",
       "headshot": "/assets/headshots/lambdas/MeghaS.jpg"
     },
-    "Melisa Bilgili": {
+    "Melisa Bilgili*": {
       "linkedin": "www.linkedin.com/in/melisabilgili/",
       "headshot": "/assets/headshots/lambdas/MelisaB.jpg"
     },
-    "Ruben Jaya": {
+    "Ruben Jaya*": {
       "linkedin": "www.linkedin.com/in/ruben-jaya-059544239/",
       "headshot": "/assets/headshots/lambdas/RubenJ.jpg"
     }
   },
 
   "Kappa Class": {
-    "Harshit Panwar": {
+    "Harshit Panwar*": {
       "linkedin": "www.linkedin.com/in/hpanwar",
       "headshot": "/assets/headshots/kappas/harsh.jpg"
     },
-    "Jade Lorences": {
+    "Jade Lorences*": {
       "linkedin": "www.linkedin.com/in/jadelorences",
       "headshot": "/assets/headshots/kappas/jade.jpg"
     },
@@ -213,21 +213,21 @@
       "linkedin": "www.linkedin.com/in/jeffrey-luk0",
       "headshot": "/assets/headshots/Blank.jpg"
     },
-    "Kaylin Albert": {
+    "Kaylin Albert*": {
       "linkedin": "www.linkedin.com/in/k-a-6a7b99231",
       "headshot": "/assets/headshots/kappas/kaylin.jpg"
     },
-    "Nadia Manoppo": {
+    "Nadia Manoppo*": {
       "linkedin": "www.linkedin.com/in/manopponadia",
       "headshot": "/assets/headshots/kappas/nadia.jpg"
     },
 
-    "Pakhe Mewani": {
+    "Pakhe Mewani*": {
       "linkedin": "www.linkedin.com/in/pmewani",
       "headshot": "/assets/headshots/kappas/pakhe.jpg"
     },
 
-    "Satyam Poonith": {
+    "Satyam Poonith*": {
       "linkedin": "www.linkedin.com/in/satyampoonith",
       "headshot": "/assets/headshots/kappas/satyam.jpg"
     },
@@ -235,7 +235,7 @@
       "linkedin": "www.linkedin.com/in/sophia-starzynski-6440a8213",
       "headshot": "/assets/headshots/kappas/sophia.jpg"
     },
-    "Valliammai Janakiraman": {
+    "Valliammai Janakiraman*": {
       "linkedin": "www.linkedin.com/in/valli-janakiraman",
       "headshot": "/assets/headshots/kappas/valli.jpg"
     }
