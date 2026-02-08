@@ -1,4 +1,27 @@
 {
+  "Rho Class": {
+    "Hailey Matz": {
+      "linkedin": "https://www.linkedin.com/in/haileymatz/",
+      "headshot": "/assets/headshots/Blank.webp"
+    },
+    "Pratheek Pasumarthy": {
+      "linkedin": "https://www.linkedin.com/in/pratheek-pasumarthy-09287a335/",
+      "headshot": "/assets/headshots/Blank.webp"
+    },
+    "Shivansh Dutta": {
+      "linkedin": "https://www.linkedin.com/in/shivansh-dutta/",
+      "headshot": "/assets/headshots/Blank.webp"
+    },
+    "Sofia Stakhryra": {
+      "linkedin": "https://www.linkedin.com/in/sofia-stakhyra/",
+      "headshot": "/assets/headshots/Blank.webp"
+    },
+
+    "Vyom Mehta": {
+      "linkedin": "https://www.linkedin.com/in/vyom-mehta-33a279370/",
+      "headshot": "/assets/headshots/Blank.webp"
+    }
+  },
   "Pi Class": {
     "Aditya Mahalingam": {
       "linkedin": "www.linkedin.com/in/adityamahalingam/",
