@@ -18,6 +18,7 @@ function displayBrotherData(dictionary) {
   for (const semester in dictionary) {
     const section = document.createElement("div");
     section.className = "container";
+    section.dataset.class = semester.trim();
 
     const title = document.createElement("h2");
     title.textContent = semester;
