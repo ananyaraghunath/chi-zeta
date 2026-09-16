@@ -1,3 +1,12 @@
 # Build settings
 markdown: kramdown
 permalink: /:title
+
+title: Alpha Kappa Psi · Chi Zeta Chapter
+description: >-
+  The Chi Zeta chapter of Alpha Kappa Psi at NJIT — the largest professional
+  co-ed business fraternity on campus, open to every major.
+
+# The bid application form. It changes every rush cycle, so it lives here
+# rather than being repeated across the pages.
+apply_form: https://docs.google.com/forms/d/e/1FAIpQLScM3WBLOewI9vj1kYUFWzWW6BCq_tahvYbS3PIiSyW__K92MA/viewform

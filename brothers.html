@@ -1,36 +1,50 @@
 ---
+title: Brothers
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-  	{% include nav.html %}
-    <div class="hero brothers wrap">
-      <div class="container">
-        <h1>Meet Our Brothers.</h1>
-        <hr>
-        <p>We are a second family made up from the diverse students at NJIT.</p>
-        <p>* = Alumni. </p>
+{% include head.html %}
+<body>
+  <section style="position:relative;height:min(52vh,440px);overflow:hidden;background:var(--navy)">
+    <img src="/assets/img/chi-zeta-brothers-2.webp" alt="Chi Zeta brothers" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 36%">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,27,51,.82),rgba(14,27,51,.66))"></div>
+    {% include nav.html %}
+  </section>
+
+  <div style="background:var(--cream);color:var(--ink);padding-bottom:clamp(60px,8vw,110px)">
+
+    <!-- title + tabs -->
+    <div class="wrap" style="text-align:center;padding-top:clamp(48px,6vw,84px)">
+      <h1 class="anton" id="bro-title" style="color:var(--navy);font-size:clamp(38px,6vw,84px);margin-bottom:20px">Brothers</h1>
+      <span style="display:block;width:96px;height:3px;background:var(--gold);margin:0 auto clamp(34px,4vw,52px)"></span>
+      <div class="tabs">
+        <button class="tab is-on" data-tab="tab-brothers">Brothers</button>
+        <button class="tab" data-tab="tab-eboard">E-Board</button>
       </div>
     </div>
-    <div id="headshots" class="wrap">
+
+    <!-- ---------- TAB: BROTHERS ---------- -->
+    <div class="tabpanel" id="tab-brothers">
+      <div class="wrap" id="headshots"></div>
     </div>
-    <div id="overlay">
-      <div id="card">
-        <img src="" id="icon"/>
-        <div class="top">
-          <h1 id="title"></h1>
-          <h2 id="subtitle"></h2>
-        </div>
-        <div class="bottom">
-          <div id="info">
-          </div>
-          <div id="description">
-          </div>
-        </div>
+
+    <!-- ---------- TAB: E-BOARD ---------- -->
+    <div class="tabpanel" id="tab-eboard" hidden>
+      <div class="wrap">
+        <section class="panel rv" style="text-align:center;padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(64px,9vw,120px)">
+          <h2 class="anton" style="color:var(--navy);font-size:clamp(34px,5vw,64px);margin-bottom:18px">Coming soon</h2>
+          <span style="display:block;width:72px;height:3px;background:var(--gold);margin:0 auto 24px"></span>
+          <p class="serif-lg it" style="color:var(--grey);max-width:38ch;margin:0 auto">
+            Executive Board portraits are being taken this semester. Names and roles land here once they are shot.
+          </p>
+        </section>
       </div>
     </div>
-    {% include footer.html %}
-    <script src="/scripts/loadBrothers.js"></script>
-  </body>
+  </div>
+
+  {% include footer.html %}
+<script src="/scripts/redesign.js"></script>
+<script src="/scripts/loadBrothers.js"></script>
+</body>
 </html>
