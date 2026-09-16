@@ -1,120 +1,60 @@
 ---
+title: Rush
 ---
 
 <!doctype html>
-<html>
-  {% include head.html %}
-  <body>
+<html lang="en">
+{% include head.html %}
+<body>
+  <div class="rushNav">
     {% include nav.html %}
-    <div class="hero rushing wrap">
-      <div class="container">
-        <!-- apply during rush season -->
-        <h1>Applications Are Open!</h1>
-        <p>Our process starts with you.</p>
-        <p>
-          Make sure to follow along with the calendar below in order to rush
-          Alpha Kappa Psi this semester. Applications will be accepted until 2/6
-          at 11:59pm
-        </p>
-        <a class="cta" href="/apply">Apply!</a>
-        <!--  apply during rush season  -->
+  </div>
+
+  <div class="rushWrap" id="rushWrap">
+    <div class="rushSticky">
+
+      <!-- ---------- SCENE A : flying alongside ---------- -->
+      <div class="scene" id="sceneAir">
+<img class="lyr" id="lSky" src="/assets/img/rush-sky.jpg" alt="">
+    <img class="lyr blend" id="lCloudFar" src="/assets/img/rush-cloud-far.jpg" alt="">
+    <div id="planeWrap"><img id="lPlane" src="/assets/img/rush-plane.png" alt="Aircraft"></div>
+    <img class="lyr blend" id="lCloudNear" src="/assets/img/rush-cloud-near.jpg" alt="">
+    <div class="sunGlow"></div>
+    <div class="haze"></div>
+        </div>
+        <div class="scene" id="sceneSea">
+          <canvas id="gl"></canvas>
+          <div id="shellLayer"></div>
+          <div id="aerialWrap"><img id="lAerial" src="/assets/img/rush-aerial.png" alt="Aircraft overhead"></div>
+        </div>
+        <div class="shellCopy">
+          <p class="shellSub">Fall 2026 &nbsp;&middot;&nbsp; Chi Zeta takes off</p>
+          <a class="btn btn-navy shellCta" href="#rush-calendar">See the calendar</a>
+        </div>
+        <div class="scrollHint" id="scrollHint"><span>Scroll</span><i></i></div>
       </div>
     </div>
 
-    <!-- Apply during rush off season -->
-    <!-- <div class="wrap cta">
-      <div class="container">
-        <h2>Unfortunately applications are closed until Spring.</h2>
-        <p></p>
-        <h2>Don't fret, if you are interested in rushing you can submit your email within this form so we can reach out to you with more info!</h2>
-        <hr>
-        <a class="cta" href="https://docs.google.com/forms/d/11IrCqyox8_d9NiCFmj3QUZFjQqNvvEORhwob7sr8_Ck/viewform">I'm Interested!</a>
-      </div>
-    </div>   -->
-    <!-- Close interest form comment -->
-    <div class="wrap">
-      <div class="container">
-        <!-- Replace calendar here  -->
-        <!--Moved cal above Awais q -->
-        <div class="wrap">
-          <div class="container">
-            <img class="rushcal" src="./assets/features/rushF26.png" />
-            <a
-              class="cta"
-              href="https://docs.google.com/forms/d/11IrCqyox8_d9NiCFmj3QUZFjQqNvvEORhwob7sr8_Ck/viewform"
-              >I'm Interested!</a
-            >
-          </div>
-        </div>
-        <!-- remove during off season -->
-        <h3>
-          "To bring together inspiring individuals, foster lifelong
-          relationships, and make an impact in the community."
-        </h3>
-        <hr />
-        <h4>Awais Qazi, Chi Zeta's Founder and Lifelong Brother</h4>
+  <div style="background:var(--cream);color:var(--ink);padding:clamp(60px,8vw,110px) 0">
+    <div class="wrap" style="text-align:center">
+      <h2 class="anton d3" style="color:var(--navy);margin-bottom:14px">Recruitment, Fall 2026</h2>
+      <p class="serif" style="color:var(--grey);max-width:52ch;margin:0 auto clamp(24px,3vw,36px)">
+        Come to the events, meet the brothers, and see whether Chi Zeta is right for you.
+      </p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a class="btn btn-gold" href="{{ site.apply_form }}" target="_blank" rel="noopener noreferrer">Apply now</a>
       </div>
     </div>
+    <div class="wrap rv" id="rush-calendar" style="padding-top:clamp(46px,6vw,80px)">
+      <img class="rushCal" src="/assets/img/fall-2026-rush-calendar-six-boarding-pass-events.jpg" alt="Fall 2026 rush calendar: six boarding-pass events from 9 to 17 September">
+      <p class="small" style="color:var(--grey);text-align:center;margin-top:22px">
+        Attend a minimum of two events to be eligible for a bid.
+      </p>
+    </div>
+  </div>
 
-    <div class="rush wrap">
-      <div class="container">
-        <div>
-          <h2>Professional Development</h2>
-          <hr />
-          <h4>Don't just stand up. Stand out.</h4>
-          <p>
-            When you join Alpha Kappa Psi, you join an elite group of
-            professionals who are committed to keeping their skills sharp and
-            careers on track. This is accomplished through professional programs
-            at various levels. Fraternity programs include Principled Business
-            Leadership Institute, The Academy, Case Competition and the College
-            of Leadership.
-          </p>
-        </div>
-        <div>
-          <h2>Experience</h2>
-          <hr />
-          <h4>Reach where you desire to go.</h4>
-          <p>
-            Through professional development, educational programs, community
-            service and a hands-on application of formal education, Alpha Kappa
-            Psi students use the business skills they are taught in the
-            classroom to acquire life skills such as the art of compromise,
-            consensus building, project management, team building and
-            networking.
-          </p>
-        </div>
-        <div>
-          <h2>Brotherhood</h2>
-          <hr />
-          <h4>Be in the company of ambition.</h4>
-          <p>
-            Members form meaningful, lifelong friendships with a multitude of
-            people, from fellow students to local business leaders and faculty.
-            The bonds of brotherhood unites members regardless of age, location
-            and experience. The importance of social skills is emphasized with a
-            variety of activities. As a result, a great deal of personal growth
-            and satisfaction is achieved which carries well into the business
-            world.
-          </p>
-        </div>
-        <div>
-          <h2>Teamwork</h2>
-          <hr />
-          <h4>It's what makes the dream work.</h4>
-          <p>
-            Through teamwork, our members gain an understanding of the
-            importance of service, develop an appreciation of diversity, and
-            utilize critical thinking skills to overcome challenges and
-            celebrate successes. The fraternity experience provides students
-            with an ideal, non-threatening environment for establishing
-            individual relationships while members work together to make the
-            most out of their involvement in Alpha Kappa Psi. Teamwork is a
-            valuable skill that ranks very high among recruiters.
-          </p>
-        </div>
-      </div>
-    </div>
-    {% include footer.html %}
-  </body>
+  {% include footer.html %}
+<script src="/scripts/redesign.js"></script>
+<script src="/scripts/rush.js"></script>
+</body>
 </html>

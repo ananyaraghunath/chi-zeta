@@ -1,105 +1,62 @@
----
----
+// Builds the roster from scripts/brotherdata.json.
+//
+// Adding a class means adding it to that file and dropping the photographs into
+// assets/headshots -- no build step, no tooling. A brother with no headshot
+// renders as initials, and a brother with no LinkedIn renders unlinked rather
+// than as a link that goes nowhere.
 
-// loadbrother.js
+var LI_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>';
 
-// Runs after the DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("/scripts/brotherdata.json")
-    .then(response => response.json())
-    .then(brothers => displayBrotherData(brothers))
-    .catch(err => console.error("Error loading brother data:", err));
-});
-
-function displayBrotherData(dictionary) {
-  const container = document.getElementById("headshots");
-  container.innerHTML = "";
-
-  for (const semester in dictionary) {
-    const section = document.createElement("div");
-    section.className = "container";
-    section.dataset.class = semester.trim();
-
-    const title = document.createElement("h2");
-    title.textContent = semester;
-
-    const grid = document.createElement("div");
-    grid.className = "grid";
-
-    for (const name in dictionary[semester]) {
-      const brother = dictionary[semester][name];
-      const card = document.createElement("div");
-
-      const img = document.createElement("img");
-      img.src = brother.headshot;
-      img.alt = name;
-      img.loading = "lazy";
-
-      if (brother.data) {
-        img.dataset.collective = brother.data;
-        card.appendChild(img);
-      } else {
-        const link = document.createElement("a");
-        link.href = `//${brother.linkedin}`;
-        link.appendChild(img);
-        card.appendChild(link);
-      }
-
-      const caption = document.createElement("p");
-      caption.textContent = name;
-      card.appendChild(caption);
-
-      grid.appendChild(card);
-    }
-
-    section.appendChild(title);
-    section.appendChild(document.createElement("hr"));
-    section.appendChild(grid);
-    container.appendChild(section);
-  }
-
-  // Keep this if you already have loadCollective() defined elsewhere
-  if (typeof loadCollective === "function") {
-    loadCollective();
-  }
+function esc(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 }
 
-/*
-//RUNS ON LOAD
-// RUNS ON LOAD
-loadJSON(function(response) {
-  // Parse JSON string into object
-  var brothers = JSON.parse(response);
-  displayBrotherData(brothers);
-});
-
-function loadJSON(callback) {
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType("application/json");
-  xobj.open('GET', '/scripts/brotherdata.json', true);
-  xobj.onreadystatechange = function () {
-    if (xobj.readyState === 4 && xobj.status === 200) {
-      // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in async mode
-      callback(xobj.responseText);
-    }
-  };
-  xobj.send(null);
+function initials(name) {
+  return name.split(/\s+/).filter(Boolean).slice(0, 2)
+             .map(function (w) { return w[0]; }).join("").toUpperCase();
 }
 
 function displayBrotherData(dictionary) {
+  var container = document.getElementById("headshots");
+  if (!container) return;
   var html = "";
+  var first = true;
+
   for (var semester in dictionary) {
-    html += "<div class='container'><h2>" + semester + "</h2><hr><div class='grid'>";
-    for (var name in dictionary[semester]) {
-      var brother = dictionary[semester][name];
-      if (brother['data']) {
-        html += "<div><img data-collective='" + brother['data'] + "' loading='lazy' src='" + brother['headshot'] + "'/><p>" + name + "</p></div>";
+    var cls = semester.trim();
+    var tag = first ? ' <span class="tag">Newest class</span>' : "";
+    first = false;
+    html += '<section class="panel rv">' +
+            '<h2 class="anton cls">' + esc(cls) + tag + "</h2>" +
+            '<div class="roster">';
+
+    for (var raw in dictionary[semester]) {
+      var b = dictionary[semester][raw];
+      var name = raw.replace(/\*/g, "").trim();
+      var media = b.headshot
+        ? '<img src="' + esc(b.headshot) + '" alt="' + esc(name) + '" loading="lazy" decoding="async">'
+        : '<span class="mono">' + esc(initials(name)) + "</span>";
+
+      if (b.linkedin) {
+        html += '<a class="bro" href="//' + esc(b.linkedin) + '" target="_blank" rel="noopener">' +
+                '<span class="frame">' + media + '<span class="hov">' + LI_ICON + "</span></span>" +
+                '<span class="nm">' + esc(name) + "</span></a>";
       } else {
-        html += "<div><a href='//" + brother['linkedin'] + "'><img loading='lazy' src='" + brother['headshot'] + "'/></a><p>" + name + "</p></div>";
+        html += '<span class="bro"><span class="frame">' + media + "</span>" +
+                '<span class="nm">' + esc(name) + "</span></span>";
       }
     }
-    html += "</div></div>";
+    html += "</div></section>";
   }
-  document.getElementById("headshots").innerHTML = html;
-  loadCollective();
-}  */
+
+  container.innerHTML = html;
+  // the shared reveal observer runs on load, before this markup exists
+  if (typeof window.revealScan === "function") window.revealScan();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("/scripts/brotherdata.json")
+    .then(function (r) { return r.json(); })
+    .then(displayBrotherData)
+    .catch(function (e) { console.error("Error loading brother data:", e); });
+});

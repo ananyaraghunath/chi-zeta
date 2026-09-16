@@ -1,122 +1,118 @@
 ---
+title: Alpha Kappa Psi &middot; Chi Zeta Chapter &middot; NJIT
 ---
 
 <!doctype html>
-<html>
-  {% include head.html %}
-  <body>
+<html lang="en">
+{% include head.html %}
+<body>
+  <section style="position:relative;min-height:min(96vh,940px);display:flex;flex-direction:column;background:var(--night);overflow:hidden">
+    <img src="/assets/img/chi-zeta-brothers-fall-2026.jpg" alt="Chi Zeta brothers, Fall 2026" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%">
+    <div id="hero-scrim" class="fadeout" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,26,49,.76) 0%,rgba(11,26,49,.64) 30%,rgba(11,26,49,.66) 56%,rgba(11,26,49,.82) 80%,rgba(11,26,49,.96) 100%)"></div>
+    
     {% include nav.html %}
-    <div class="wrap header">
-      <div class="container">
-        <h1>Applications Are Open!</h1>
-        <hr />
-        <p>
-          We are a group of talent driven students who want to make the most of
-          our college years. Be apart of NJIT's largest professional co-ed
-          business fraternity.
-        </p>
-        <!-- I switch from apply button to learn more button -->
-        <!-- <a class="cta" href="/about">Learn More</a> -->
-        <a class="cta" href="/apply">Apply</a>
-        <a class="cta" href="assets/features/RushCalendarF26.pdf">Rush Calendar</a>
-        <a
-          class="cta"
-          href="https://docs.google.com/forms/d/11IrCqyox8_d9NiCFmj3QUZFjQqNvvEORhwob7sr8_Ck/viewform"
-          >I'm Interested!</a
-        >
-        <!-- Decided to add a button to the calendar on the front page -->
+    <div class="wrap fadeout" id="hero-copy" style="position:relative;margin-top:auto;padding-bottom:clamp(52px,8vw,110px)">
+      <p class="small" style="margin-bottom:38px;font-size:clamp(20px,2.1vw,28px);letter-spacing:.02em;color:var(--cream)">Alpha Kappa Psi &nbsp;·&nbsp; Chi Zeta Chapter &nbsp;·&nbsp; NJIT</p>
+      <h1 class="anton d1" style="color:#fff;max-width:13ch;margin-bottom:26px">Applications are <span class="gold">open.</span></h1>
+      <p class="serif-lg" style="color:rgba(247,245,241,.84);max-width:46ch;margin-bottom:38px">
+        We are a group of talent-driven students who want to make the most of our college years.
+        Be a part of NJIT&rsquo;s largest professional co-ed business fraternity.
+      </p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a class="btn btn-gold" href="{{ site.apply_form }}" target="_blank" rel="noopener noreferrer">Apply now</a>
+        <a class="btn btn-ghost" href="/rush">Rush calendar</a>
       </div>
     </div>
-    <div class="wrap proof">
-      <div class="container front">
-        <h2>Take it from me.</h2>
-        <hr />
-      </div>
-      <div class="container grid">
-        <div>
-          <img src="/assets/headshots/alpha/Noah Hubert.jpg" />
-          <p>"I got my first internship from an AKPsi networking event."</p>
-          <p class="footnote">Noah Hubert - Alpha Class</p>
-        </div>
-        <div>
-          <img src="/assets/headshots/theta/ivana.jpeg" />
-          <p>
-            "The skills I learned from our intensive rush process built my
-            confidence."
-          </p>
-          <p class="footnote">Ivana Baez - Theta Class</p>
-        </div>
-        <div class="hidden">
-          <img src="/assets/headshots/pis/ananya.jpg" />
-          <p>"I built both my confidence and connections!"</p>
-          <p class="footnote">Ananya Raghunath - Pi Class</p>
-        </div>
+  </section>
+
+  <section style="background:var(--navy);padding:clamp(90px,13vw,190px) 0">
+    <div class="wrap rv" style="text-align:center">
+      <div class="anton gold" style="font-size:clamp(70px,17vw,240px);line-height:.86;letter-spacing:-.01em">278,000</div>
+      <p class="serif-lg it" style="color:var(--grey-d);max-width:40ch;margin:30px auto 0">
+        Brothers around the world. With this many, you never know where or when you&rsquo;ll run into one.
+      </p>
+    </div>
+  </section>
+
+  <section style="background:var(--cream);padding:clamp(70px,10vw,140px) 0 clamp(80px,11vw,160px)">
+    <div class="wrap">
+      <h2 class="anton d2 rv" style="color:var(--navy);margin-bottom:clamp(44px,6vw,80px)">Take it from me.</h2>
+      <div class="stack" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(26px,3.4vw,54px);align-items:start">
+        <figure class="rv">
+          <div class="ph" style="aspect-ratio:3/4;margin-bottom:26px"><img src="/assets/img/noah-hubert.jpg" alt="Noah Hubert"></div>
+          <blockquote class="serif-lg it" style="color:var(--navy);margin-bottom:16px">&ldquo;I got my first internship from an AKPsi networking event.&rdquo;</blockquote>
+          <figcaption class="small goldDeep">Noah Hubert &nbsp;·&nbsp; Alpha Class</figcaption>
+        </figure>
+        <figure class="rv off" style="margin-top:clamp(0px,5vw,70px)">
+          <div class="ph" style="aspect-ratio:3/4;margin-bottom:26px"><img src="/assets/img/ivana-baez.jpg" alt="Ivana Baez"></div>
+          <blockquote class="serif-lg it" style="color:var(--navy);margin-bottom:16px">&ldquo;The skills I learned from our intensive rush process built my confidence.&rdquo;</blockquote>
+          <figcaption class="small goldDeep">Ivana Baez &nbsp;·&nbsp; Theta Class</figcaption>
+        </figure>
+        <figure class="rv off" style="margin-top:clamp(0px,10vw,140px)">
+          <div class="ph" style="aspect-ratio:3/4;margin-bottom:26px"><img src="/assets/img/ananya-raghunath.jpg" alt="Ananya Raghunath"></div>
+          <blockquote class="serif-lg it" style="color:var(--navy);margin-bottom:16px">&ldquo;I built both my confidence and connections!&rdquo;</blockquote>
+          <figcaption class="small goldDeep">Ananya Raghunath &nbsp;·&nbsp; Pi Class</figcaption>
+        </figure>
       </div>
     </div>
-    <div class="wrap benefits">
-      <div class="container">
-        <div class="grid">
-          <div class="description">
-            <h2>Jump to the top of the resume stack.</h2>
-            <hr />
-            <p>
-              Uncover the ways a brother networks to make a lasting impression
-              on potential employers.
-            </p>
-          </div>
-          <img src="/assets/features/resume.jpg" />
-          <img src="/assets/features/network.jpg" />
-          <div class="description">
-            <h2>Be more than just any college student.</h2>
-            <hr />
-            <p>
-              Time well spent on professional development is the keys to
-              success. Where do you see yourself in 5 years?
-            </p>
-          </div>
-        </div>
+  </section>
+
+  <section class="wrap stack rv" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(26px,4vw,64px);align-items:center;padding-top:clamp(70px,10vw,150px);padding-bottom:clamp(70px,10vw,150px)">
+    <div class="ph" style="grid-column:span 7;aspect-ratio:16/11"><img src="/assets/img/resume-workshop.webp" alt="Resume workshop"></div>
+    <div style="grid-column:9 / span 4">
+      <h2 class="anton d3" style="color:#fff;margin-bottom:22px">Jump to the top of the <span class="gold">resume stack.</span></h2>
+      <p class="serif" style="color:var(--grey-d);margin-bottom:30px">Uncover the ways a brother networks to make a lasting impression on potential employers.</p>
+      <a class="ulink" href="/careers" style="color:#fff">See where our brothers work</a>
+    </div>
+  </section>
+
+  <section style="background:var(--cream)">
+    <div class="wrap stack rv" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(26px,4vw,64px);align-items:center;padding-top:clamp(70px,10vw,150px);padding-bottom:clamp(70px,10vw,150px)">
+      <div style="grid-column:span 4">
+        <h2 class="anton d3" style="color:var(--navy);margin-bottom:22px">Be more than just any <span class="goldDeep">college student.</span></h2>
+        <p class="serif" style="color:var(--grey);margin-bottom:30px">Time well spent on professional development is the key to success. Where do you see yourself in five years?</p>
+        <a class="ulink" href="/rush" style="color:var(--navy)">Explore recruitment</a>
+      </div>
+      <div class="ph" style="grid-column:6 / span 7;aspect-ratio:16/11"><img src="/assets/img/networking-night.webp" alt="Networking night"></div>
+    </div>
+  </section>
+
+  <section style="background:var(--night);padding:clamp(80px,11vw,160px) 0">
+    <div class="wrap">
+      <div class="stack" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(26px,3.4vw,52px);align-items:start">
+        <article class="rv">
+          <div class="ph" style="aspect-ratio:4/3;margin-bottom:26px"><img src="/assets/img/brotherhood.webp" alt="Brotherhood"></div>
+          <h3 class="anton d3" style="color:#fff;margin-bottom:14px">Lifelong brotherhood.</h3>
+          <p class="serif" style="color:var(--grey-d)">Join brothers around the world. With this many, you never know where or when you&rsquo;ll run into one.</p>
+        </article>
+        <article class="rv off" style="margin-top:clamp(0px,5vw,66px)">
+          <div class="ph" style="aspect-ratio:4/3;margin-bottom:26px"><img src="/assets/img/exclusive-events.webp" alt="Exclusive events"></div>
+          <h3 class="anton d3" style="color:#fff;margin-bottom:14px">Exclusive events.</h3>
+          <p class="serif" style="color:var(--grey-d)">Be the first invited to professional and volunteer opportunities on campus. Gain access to brotherhood-only events.</p>
+        </article>
+        <article class="rv off" style="margin-top:clamp(0px,10vw,132px)">
+          <div class="ph" style="aspect-ratio:4/3;margin-bottom:26px"><img src="/assets/img/community-service-in-newark.webp" alt="Community service in Newark"></div>
+          <h3 class="anton d3" style="color:#fff;margin-bottom:14px">Lasting impact.</h3>
+          <p class="serif" style="color:var(--grey-d)">Rack up volunteer hours both on and off campus by investing yourself in the Newark community.</p>
+        </article>
       </div>
     </div>
-    <div class="wrap features">
-      <div class="container">
-        <div class="grid">
-          <div class="feature">
-            <img src="/assets/features/betaclass.jpg" />
-            <h4>Lifelong Brotherhood.</h4>
-            <hr />
-            <p class="footnote">
-              Join over 278,000 brothers around the world. With this many, you
-              never know where or when you'll run into one.
-            </p>
-          </div>
-          <div class="feature">
-            <img src="/assets/features/mocktail.jpg" />
-            <h4>Exclusive Events.</h4>
-            <hr />
-            <p class="footnote">
-              Be the first invited to professional and volunteer opportunities
-              on campus. Gain access to brotherhood only events.
-            </p>
-          </div>
-          <div class="feature">
-            <img src="/assets/features/garbage.jpg" />
-            <h4>Lasting Impact.</h4>
-            <hr />
-            <p class="footnote">
-              Rack up volunteer hours both on and off campus by investing
-              yourself in the Newark community.
-            </p>
-          </div>
-        </div>
+  </section>
+
+  <section style="position:relative;overflow:hidden;background:var(--night-2)">
+    <img src="/assets/img/chi-zeta-brothers.webp" alt="Chi Zeta brothers" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,26,49,.86),rgba(11,26,49,.72))"></div>
+    <div class="wrap rv" style="position:relative;padding:clamp(90px,13vw,190px) 0;text-align:center">
+      <h2 class="anton d2" style="color:#fff;max-width:18ch;margin:0 auto 26px">Interested? Here&rsquo;s where to <span class="gold">start.</span></h2>
+      <p class="serif-lg it" style="color:rgba(247,245,241,.8);max-width:44ch;margin:0 auto 38px">Follow the calendar, come to the events, and meet us before you apply.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a class="btn btn-gold" href="{{ site.apply_form }}" target="_blank" rel="noopener noreferrer">Apply now</a>
+        <a class="btn btn-ghost" href="/about">Learn more</a>
       </div>
     </div>
-    <div class="wrap cta">
-      <div class="container">
-        <h1>Interested? Click here for more information!</h1>
-        <hr />
-        <a class="cta" href="/about">Learn More</a>
-      </div>
-    </div>
-    {% include footer.html %}
-  </body>
+  </section>
+
+  {% include footer.html %}
+<script src="/scripts/redesign.js"></script>
+</body>
 </html>

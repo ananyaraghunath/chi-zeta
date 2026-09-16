@@ -1,17 +1,16 @@
-<nav class="wrap">
-  <div class="container">
-    <div>
-      <a href="/"><h4 class="show">AKPsi</h4><h4 class="hidden">Alpha Kappa Psi</h4></a>
-    </div>
-    <div class="links">
-      <a href="/about"{% if page.url == "/about" %}class="active"{% endif %}>About</a>
-      <a href="/brothers"{% if page.url == "/brothers" %}class="active"{% endif %}>Brothers</a>
-	  <!--<a href="/alumni"{% if page.url == "/alumni" %}class="active"{% endif %}>Alumni</a>-->
-      <!-- <a href="/contact"{% if page.url == "/contact" %}class="active"{% endif %}>Contact</a> -->
-      <a href="/rush"{% if page.url == "/rush" %}class="active"{% endif %}>Rush</a>
-      <!--    un-comment for apply in nav bar -->
-      <!-- <a href="/apply"{% if page.url == "/apply" %}class="active"{% endif %}>Apply</a> -->
-	<!--  -->
-    </div>
+<div class="wrap nav" style="color:#fff">
+  <div style="display:flex;align-items:baseline;gap:11px">
+    <span class="anton" style="font-size:23px">AKPsi</span>
+    <span style="width:1px;height:15px;background:rgba(255,255,255,.34)"></span>
+    <span class="gold" style="font-size:18px;font-weight:600;letter-spacing:.02em">Chi Zeta</span>
   </div>
-</nav>
+  <nav style="display:flex;align-items:center;gap:clamp(14px,2.3vw,34px);flex-wrap:wrap">
+    <a class="nlink" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
+    <a class="nlink" href="/about"{% if page.url == "/about" %} aria-current="page"{% endif %}>About</a>
+    <a class="nlink" href="/brothers"{% if page.url == "/brothers" %} aria-current="page"{% endif %}>Brothers</a>
+    <a class="nlink" href="/careers"{% if page.url == "/careers" %} aria-current="page"{% endif %}>Careers</a>
+    <a class="nlink" href="/rush"{% if page.url == "/rush" %} aria-current="page"{% endif %}>Rush</a>
+    <a class="nlink" href="/media"{% if page.url == "/media" %} aria-current="page"{% endif %}>Media</a>
+    <a class="btn btn-gold" href="{{ site.apply_form }}" target="_blank" rel="noopener noreferrer" style="padding:12px 24px">Apply</a>
+  </nav>
+</div>
