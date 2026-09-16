@@ -264,6 +264,10 @@
             background:rgba(22,41,74,.74);opacity:0;transition:opacity .35s ease}
   .bro:hover .hov,.bro:focus-visible .hov{opacity:1}
   .bro .hov svg{width:clamp(28px,3vw,42px);height:auto;fill:var(--gold)}
+  /* alumni marker: gold and raised, so it reads as an annotation
+     rather than as punctuation belonging to the name */
+  .alum{color:var(--gold-deep);font-weight:700;vertical-align:super;
+    font-size:.78em;margin-left:2px;letter-spacing:0}
   .bro .nm{display:block;font-family:"Playfair Display",serif;
            font-size:clamp(14px,1.05vw,16px);line-height:1.35;color:var(--ink);margin-top:12px}
 

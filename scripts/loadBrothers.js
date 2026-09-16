@@ -32,7 +32,13 @@ function displayBrotherData(dictionary) {
 
     for (var raw in dictionary[semester]) {
       var b = dictionary[semester][raw];
-      var name = raw.replace(/\*/g, "").trim();
+      // a trailing asterisk in the data marks an alumnus. It is rendered as
+      // its own element so it can be styled and announced, rather than left
+      // as a stray character hanging off the end of a name.
+      var alum = /\*/.test(raw);
+      var nm = raw.replace(/\*/g, "").trim();
+      var mark = alum ? '<span class="alum" title="Alumni">*</span>' : "";
+      var name = nm;
       var media = b.headshot
         ? '<img src="' + esc(b.headshot) + '" alt="' + esc(name) + '" loading="lazy" decoding="async">'
         : '<span class="mono">' + esc(initials(name)) + "</span>";
@@ -40,10 +46,10 @@ function displayBrotherData(dictionary) {
       if (b.linkedin) {
         html += '<a class="bro" href="//' + esc(b.linkedin) + '" target="_blank" rel="noopener">' +
                 '<span class="frame">' + media + '<span class="hov">' + LI_ICON + "</span></span>" +
-                '<span class="nm">' + esc(name) + "</span></a>";
+                '<span class="nm">' + esc(name) + mark + "</span></a>";
       } else {
         html += '<span class="bro"><span class="frame">' + media + "</span>" +
-                '<span class="nm">' + esc(name) + "</span></span>";
+                '<span class="nm">' + esc(name) + mark + "</span></span>";
       }
     }
     html += "</div></section>";
