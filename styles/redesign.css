@@ -119,6 +119,48 @@
     .statRow,.quoteRow{grid-template-columns:1fr}
     .statRow > div:nth-child(2){transform:none}
   }
+  /* ---------- executive board ---------- */
+  /* Same tile, frame and hover as the roster, so the two pages read as one
+     system; the role line and the featured president are what an executive
+     board needs that a roster does not. */
+  .ebBandWrap{margin:clamp(34px,4.5vw,64px) 0 clamp(36px,4.6vw,64px)}
+  .ebBand{display:block;width:100%;height:auto}
+  .ebCard{display:block;color:inherit}
+  .ebShot{position:relative;display:block;overflow:hidden;background:rgba(247,245,241,.72);
+    padding:clamp(6px,.7vw,10px);transition:background .35s ease}
+  .ebCard:hover .ebShot{background:#fff}
+  .ebShot img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;
+    transition:transform .8s cubic-bezier(.2,.6,.2,1)}
+  .ebCard:hover .ebShot img{transform:scale(1.04)}
+  .ebRole{display:block;font-family:Anton,sans-serif;text-transform:uppercase;
+    font-size:clamp(11px,.85vw,13px);letter-spacing:.07em;color:var(--gold-deep);margin-top:15px}
+  .ebName{display:block;font-family:"Playfair Display",Georgia,serif;
+    font-size:clamp(17px,1.5vw,21px);color:var(--ink);line-height:1.3;margin-top:5px}
+  .ebCls{display:block;font-family:Besley,Georgia,serif;font-style:italic;
+    font-size:14px;color:var(--grey);margin-top:4px}
+  /* the president: photograph beside the title rather than beneath it */
+  .ebHero{display:grid;grid-template-columns:minmax(0,450px) minmax(0,320px);
+    justify-content:center;gap:clamp(24px,3.6vw,56px);align-items:center;
+    margin-bottom:clamp(46px,6vw,88px)}
+  .ebHero .ebText{display:block}
+  .ebHero .ebText::before{content:"";display:block;width:54px;height:3px;
+    background:var(--gold);margin-bottom:18px}
+  .ebHero .ebRole{font-size:clamp(13px,1.1vw,16px);margin-top:0}
+  .ebHero .ebName{font-size:clamp(28px,3.4vw,52px);line-height:1.08;margin-top:10px}
+  .ebHero .ebCls{font-size:clamp(15px,1.2vw,18px);margin-top:10px}
+  .ebGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3vw,46px)}
+  @media (max-width:900px){
+    .ebHero{grid-template-columns:1fr;gap:22px}
+    .ebHero .ebShot{max-width:330px}
+    .ebGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  /* At the narrowest sizes the grid centres a single 330px column. The hero
+     has to adopt the same column, or the president's photo and name sit to
+     the left of everyone else's. */
+  @media (max-width:560px){
+    .ebGrid,.ebHero{grid-template-columns:1fr;max-width:330px;
+      margin-left:auto;margin-right:auto}
+  }
   /* ---------- media page ---------- */
   .secHead{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;
            margin-bottom:clamp(24px,3vw,38px)}
@@ -234,8 +276,6 @@
   @media (max-width:700px){ #planeWrap{width:62%} #aerialWrap{width:24%} .rushWrap{height:400vh} }
   .fadeout{transition:opacity .7s cubic-bezier(.2,.6,.2,1)}
   .is-playing .fadeout{opacity:0;pointer-events:none}
-  .is-playing
-  
   .tabs{display:inline-flex;gap:0;border:1px solid rgba(22,41,74,.22)}
   .tab{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(12px,1.2vw,15px);
        letter-spacing:.06em;padding:16px clamp(20px,3vw,44px);border:0;cursor:pointer;
@@ -294,5 +334,10 @@
     .tl-a,.tl-b{grid-column:2!important;text-align:left!important;padding:0!important}
     .tl-a .tl-pic{margin-left:0}
     .tl-item{--from:-26px!important}
+  }
+  @media (max-width:560px){
+    .hero-tag{display:table;text-align:center}
+    .hero-tag-sep{display:none}
+    .hero-tag-school{display:block;margin-top:4px}
   }
   @media (max-width:900px){ .stack{grid-template-columns:1fr!important} .stack>*{grid-column:auto!important} .off{margin-top:0!important} }
