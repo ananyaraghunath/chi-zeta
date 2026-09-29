@@ -119,6 +119,31 @@
     .statRow,.quoteRow{grid-template-columns:1fr}
     .statRow > div:nth-child(2){transform:none}
   }
+  /* ---------- core values ---------- */
+  /* Five abreast on a wide screen, and never boxed: a gold hairline over each
+     name does the separating, which is the same device the board hero uses. */
+  .cvRow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(20px,2.6vw,40px)}
+  .cv{padding-top:18px;border-top:3px solid var(--gold)}
+  .cvName{color:var(--navy);font-size:clamp(17px,1.5vw,23px);margin-bottom:10px}
+  .cvText{color:var(--grey);font-size:clamp(14px,1.05vw,16px);line-height:1.6}
+  @media (max-width:1000px){ .cvRow{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:560px){ .cvRow{grid-template-columns:1fr} }
+  /* ---------- president's letter ---------- */
+  /* Portrait beside the words rather than above them, so a long letter still
+     reads as a letter and not as a wall. */
+  .letter{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);
+    gap:clamp(26px,4vw,70px);align-items:start}
+  .ltPic{margin:0}
+  .ltPic img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .ltHead{color:var(--navy);margin-bottom:clamp(18px,2vw,26px)}
+  .ltText{color:var(--grey);margin-bottom:clamp(14px,1.6vw,20px);max-width:66ch}
+  .ltSign{font-family:"Playfair Display",Georgia,serif;font-style:italic;
+    color:var(--ink);line-height:1.7;margin-top:clamp(18px,2.4vw,30px)}
+  .ltName{font-style:normal;font-weight:600}
+  @media (max-width:820px){
+    .letter{grid-template-columns:1fr;gap:24px}
+    .ltPic{max-width:300px}
+  }
   /* ---------- executive board ---------- */
   /* Same tile, frame and hover as the roster, so the two pages read as one
      system; the role line and the featured president are what an executive
